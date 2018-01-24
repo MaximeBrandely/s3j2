@@ -6,7 +6,7 @@ require "gmail"
 
 session = GoogleDrive::Session.from_config("config.json")
 
-ws = session.spreadsheet_by_key("1_gGRimd3J3Mg0VwjnIA8b-K_SDkxkqJDIOQ9F0SVCho").worksheets[0]
+ws = session.spreadsheet_by_key("key").worksheets[0]
 
 email = ws[181, 2]
 
@@ -14,7 +14,7 @@ email = ws[181, 2]
 #def envoyer_UN_mail(email, nom)
 
 
-	gmail = Gmail.connect('test.thehackingproject@gmail.com', 'thehackingproject75')
+	gmail = Gmail.connect('id', 'password')
 
 	gmail.deliver do
 		
